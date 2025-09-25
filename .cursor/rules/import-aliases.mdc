@@ -1,0 +1,12 @@
+---
+alwaysApply: true
+description: "Siempre usa alias de importación (@/) para componentes y módulos del proyecto en lugar de rutas relativas."
+globs: "*.ts,*.tsx,*.js,*.jsx"
+---
+# Regla de Importaciones
+
+Siempre utiliza alias de importación que comienzan con `@/` para referenciar componentes y módulos dentro del proyecto. Evita las rutas relativas (`../`) para mejorar la claridad y la mantenibilidad del código.
+
+Ejemplo:
+- **Bien:** `import Button from '@/components/Button';`
+- **Mal:** `import Button from '../components/Button';`

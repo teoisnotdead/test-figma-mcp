@@ -1,0 +1,41 @@
+---
+alwaysApply: true
+description: "Directrices para la creación de componentes de UI utilizando las convenciones de Atomic Design (Átomos, Moléculas, Organismos, Plantillas, Páginas)."
+globs: "*.ts,*.tsx,*.js,*.jsx"
+---
+# Convenciones de Atomic Design para Componentes UI
+
+Siempre sigue las convenciones de Atomic Design al crear componentes de UI para asegurar una estructura modular, escalable y mantenible.
+
+## Niveles de Atomic Design:
+
+1.  **Átomos (Atoms):**
+    *   **Uso:** Bloques de construcción básicos de UI que no se pueden dividir más sin perder su funcionalidad (ej. `Button`, `Input`, `Label`, `Icon`).
+    *   **Ubicación:** `src/components/atoms/`
+    *   **Características:** Se enfocan en un solo propósito, son contextuales.
+
+2.  **Moléculas (Molecules):**
+    *   **Uso:** Grupos de átomos que funcionan juntos como una unidad cohesiva (ej. `SearchForm` (Input + Button), `CardHeader` (Image + Headline + Caption)).
+    *   **Ubicación:** `src/components/molecules/`
+    *   **Características:** Construyen funcionalidad simple a partir de átomos.
+
+3.  **Organismos (Organisms):**
+    *   **Uso:** Grupos de moléculas y/o átomos que forman una sección de interfaz compleja y reutilizable (ej. `Header` (Logo + Navigation + SearchForm), `ProductGrid`).
+    *   **Ubicación:** `src/components/organisms/`
+    *   **Características:** Representan secciones de la interfaz, ensamblan piezas más pequeñas para crear una funcionalidad robusta.
+
+4.  **Plantillas (Templates):**
+    *   **Uso:** Diseños de página que organizan organismos y moléculas en una estructura de contenido. Se enfocan en la disposición del contenido, sin contenido real.
+    *   **Ubicación:** `src/components/templates/` (o `src/app/templates/` si se ajusta mejor a la estructura de rutas de Next.js)
+    *   **Características:** Esqueletos de página, definen el contexto de los organismos.
+
+5.  **Páginas (Pages):**
+    *   **Uso:** Instancias específicas de plantillas que cargan contenido real. Son la implementación final de la UI.
+    *   **Ubicación:** `src/app/` (en Next.js, estas son tus rutas de página)
+    *   **Características:** Utilizan los componentes de plantilla, organismos y moléculas para mostrar datos reales.
+
+## Directrices Generales:
+
+*   **Nomenclatura:** Nombra los componentes de manera clara y descriptiva según su nivel atómico y su propósito.
+*   **Separación de Preocupaciones:** Cada nivel debe tener una responsabilidad clara. Los átomos no deben tener lógica de negocio compleja, y las páginas deben orquestar los componentes con datos.
+*   **Reusabilidad:** Prioriza la creación de componentes reutilizables en los niveles de átomo, molécula y organismo.

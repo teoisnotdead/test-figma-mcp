@@ -1,0 +1,43 @@
+---
+alwaysApply: true
+description: "Reglas de diseño de tipografía, botones y consistencia para el proyecto."
+---
+# Reglas de Diseño (Tipografía)
+
+## 1. Headline (H1)
+- Uso: Títulos principales o secciones destacadas
+- Tailwind base:
+  - Small: text-2xl font-bold
+  - Medium: text-3xl font-bold
+  - Large: text-4xl font-bold
+
+## 2. Subheadline (H2/H3)
+- Uso: Subtítulos, nombres de secciones, headers secundarios
+- Tailwind base:
+  - Small: text-xl font-semibold
+  - Medium: text-2xl font-semibold
+  - Large: text-3xl font-semibold
+
+## 3. Body
+- Uso: Texto principal, párrafos
+- Tailwind base:
+  - Small: text-sm leading-relaxed
+  - Medium: text-base leading-relaxed
+  - Large: text-lg leading-relaxed
+
+## 4. Caption / Label
+- Uso: Notas, descripciones pequeñas, inputs, metadata
+- Tailwind base:
+  - Small: text-xs text-gray-600
+  - Medium: text-sm text-gray-600
+  - Large: text-base text-gray-600
+
+## Botones
+- **Botones principales**: usa algo cercano a body (text-sm o text-base), pero más fuerte (font-semibold o bold) y en mayúsculas si tu marca lo permite.
+- **Botones secundarios / pequeños**: puedes usar la escala de caption reforzada.
+
+## Tips de Consistencia
+1. No uses más de 2 pesos tipográficos (regular y bold, máximo semibold si hace falta).
+2. Líneas consistentes: ajusta `leading` en Tailwind para mejorar la lectura.
+3. Escalado fluido: puedes usar `clamp()` en CSS para tamaños que crezcan suavemente entre breakpoints, aunque Tailwind ya facilita con `md:` y `lg:`.
+4. Accesibilidad: cuida que el `body` en mobile never sea más chico que `text-sm`.
