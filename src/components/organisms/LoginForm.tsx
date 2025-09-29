@@ -1,14 +1,11 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import Input from '@/components/atoms/Input';
 import Button from '@/components/atoms/Button';
 import Checkbox from '@/components/atoms/Checkbox';
-import {
-  LOGIN_LOGO_INNER,
-  LOGIN_LOGO_MAIN,
-} from '@/constants/imagePaths';
+import { ICON_LOGO } from '@/constants/imagePaths';
 
 interface LoginFormProps {
   username: string;
@@ -19,6 +16,7 @@ interface LoginFormProps {
   setRememberSession: (value: boolean) => void;
   handleSubmit: (e: React.FormEvent) => void;
   id?: string; // Agregada la propiedad 'id'
+  formError?: string | null; // Nuevo prop para errores del formulario
 }
 
 const LoginForm: React.FC<LoginFormProps> = ({
@@ -30,6 +28,7 @@ const LoginForm: React.FC<LoginFormProps> = ({
   setRememberSession,
   handleSubmit,
   id,
+  formError,
 }) => {
   return (
     <div id={id} className="bg-white box-border content-stretch flex flex-col gap-2 md:gap-6 items-center p-6 relative rounded-[16px] w-full max-w-sm md:w-[400px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.1),0px_1px_2px_0px_rgba(0,0,0,0.06)]">
@@ -38,11 +37,11 @@ const LoginForm: React.FC<LoginFormProps> = ({
         <div className="bg-[#193cb8] box-border content-stretch flex flex-col md:flex-row gap-2.5 md:gap-[10px] items-start md:items-center p-3 md:p-4 relative rounded-lg md:rounded-[12px] shrink-0 size-12 md:size-[64px]">
           {/* Mobile Logo */}
           <div className="md:hidden h-[23.273px] relative shrink-0 w-6">
-            <Image alt="Logo" className="block max-w-none size-full" src={LOGIN_LOGO_INNER} width={24} height={23} />
+            <Image alt="Logo" className="block max-w-none size-full" src={ICON_LOGO} width={24} height={23} />
           </div>
           {/* Desktop Logo */}
           <div className="hidden md:block relative shrink-0 size-8 md:size-8">
-            <Image alt="Logo Principal" className="block max-w-none size-full" src={LOGIN_LOGO_MAIN} width={32} height={32} />
+            <Image alt="Logo Principal" className="block max-w-none size-full" src={ICON_LOGO} width={32} height={32} />
           </div>
         </div>
         <div className="box-border content-stretch flex flex-col gap-2 md:gap-2 items-center leading-none md:leading-[0] not-italic px-0 py-1 md:py-[4px] relative shrink-0 text-[#364153] text-center w-full">
@@ -85,6 +84,9 @@ const LoginForm: React.FC<LoginFormProps> = ({
         {/* Botones de Acción */}
         <div className="box-border content-stretch flex flex-col gap-2 items-start px-0 py-6 relative shrink-0 w-full">
           <Button type="submit" size="Large" variant="Default" className="w-full">Iniciar Sesión</Button>
+          {formError && (
+            <p className="text-red-500 text-sm mt-2 w-full text-center">{formError}</p>
+          )}
           <button type="button" className="box-border content-stretch flex gap-2.5 h-12 items-center justify-center px-0 py-3 relative rounded-lg shrink-0 w-full">
             <p className="font-['Inter:Medium',_sans-serif] font-medium text-sm leading-5 text-[#193cb8] whitespace-pre">¿Olvidaste contraseña?</p>
           </button>

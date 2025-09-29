@@ -1,13 +1,27 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import { useAuth } from '@/context/AuthContext';
 import Header from '@/components/organisms/Header';
 import NavigationSidebar from '@/components/organisms/NavigationSidebar';
 import StatsCardsGrid from '@/components/organisms/StatsCardsGrid';
 import CalendarCard from '@/components/organisms/CalendarCard';
 
 export default function Home() {
+  const { isLoggedIn, isLoading } = useAuth();
+  const router = useRouter();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  useEffect(() => {
+    if (!isLoading && !isLoggedIn) {
+      router.push('/login');
+    }
+  }, [isLoggedIn, isLoading, router]);
+
+  if (isLoading || !isLoggedIn) {
+    return <div className="flex items-center justify-center min-h-screen">Cargando...</div>; // O un spinner
+  }
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
