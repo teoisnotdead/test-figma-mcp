@@ -15,7 +15,7 @@ const AlertCard: React.FC<AlertCardProps> = ({
   icon,
   onClose,
 }) => {
-  let cardClasses = "bg-amber-100 box-border content-stretch flex flex-col items-start relative rounded-[8px] size-full ";
+  const cardClasses = "bg-amber-100 box-border content-stretch flex flex-col items-start relative rounded-[8px] size-full ";
   let titleClasses = "font-['Inter:Bold',_sans-serif] font-bold leading-[0] not-italic relative shrink-0 text-red-800 ";
   let messageClasses = "font-['Inter:Medium',_sans-serif] font-medium leading-[0] not-italic relative shrink-0 text-red-800 w-full ";
   let iconSizeClasses = "";

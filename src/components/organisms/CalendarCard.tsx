@@ -7,11 +7,8 @@ import {
   CALENDAR_ARROW_RIGHT_ICON,
 } from '@/constants/imagePaths';
 
-interface CalendarCardProps {
-  // Podríamos añadir props si las fechas o eventos fueran dinámicos
-}
 
-const CalendarCard: React.FC<CalendarCardProps> = () => {
+const CalendarCard: React.FC<React.Component> = () => {
   const [currentMonth, setCurrentMonth] = useState(new Date(2025, 8)); // Cambiado a Septiembre de 2025
 
   const formatMonthYear = (date: Date) => {

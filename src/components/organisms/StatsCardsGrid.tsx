@@ -1,11 +1,8 @@
 import React from 'react';
 import MenuGestionCard from '@/components/molecules/MenuGestionCard';
 
-interface StatsCardsGridProps {
-  // Podemos añadir props si el grid o las tarjetas necesitan ser dinámicas en el futuro
-}
 
-const StatsCardsGrid: React.FC<StatsCardsGridProps> = () => {
+const StatsCardsGrid: React.FC<React.Component> = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       <MenuGestionCard
