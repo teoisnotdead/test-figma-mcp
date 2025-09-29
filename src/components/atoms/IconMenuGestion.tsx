@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import {
   ICON_MENU_GESTION_ESCUDO,
   ICON_MENU_GESTION_PEOPLE,
@@ -20,7 +21,7 @@ const IconMenuGestion: React.FC<IconMenuGestionProps> = ({
       <div className="relative size-full">
         <div className="absolute bg-[#b9f8cf] left-0 rounded-[11.25px] size-[45px] top-0" />
         <div className="absolute left-[5.63px] size-[33.75px] top-[5.63px]">
-          <img alt="" className="block max-w-none size-full" src={ICON_MENU_GESTION_ESCUDO} />
+          <Image alt="Icono de Escudo" className="block max-w-none size-full" src={ICON_MENU_GESTION_ESCUDO} width={34} height={34} />
         </div>
       </div>
     ),
@@ -28,7 +29,7 @@ const IconMenuGestion: React.FC<IconMenuGestionProps> = ({
       <div className="relative size-full">
         <div className="absolute bg-[#b9f8cf] left-0 rounded-[11.25px] size-[45px] top-0" />
         <div className="absolute left-[5.63px] size-[33.75px] top-[5.63px]">
-          <img alt="" className="block max-w-none size-full" src={ICON_MENU_GESTION_PEOPLE} />
+          <Image alt="Icono de Personas" className="block max-w-none size-full" src={ICON_MENU_GESTION_PEOPLE} width={34} height={34} />
         </div>
       </div>
     ),
@@ -36,7 +37,7 @@ const IconMenuGestion: React.FC<IconMenuGestionProps> = ({
       <div className="relative size-full">
         <div className="absolute bg-[#ffe2e2] left-0 rounded-[11.25px] size-[45px] top-0" />
         <div className="absolute left-[5.63px] size-[33.75px] top-[5.63px]">
-          <img alt="" className="block max-w-none size-full" src={ICON_MENU_GESTION_ALERT} />
+          <Image alt="Icono de Alerta" className="block max-w-none size-full" src={ICON_MENU_GESTION_ALERT} width={34} height={34} />
         </div>
       </div>
     ),
@@ -44,7 +45,7 @@ const IconMenuGestion: React.FC<IconMenuGestionProps> = ({
       <div className="relative size-full">
         <div className="absolute bg-[#fee685] left-0 rounded-[11.25px] size-[45px] top-0" />
         <div className="absolute left-[5.63px] size-[33.75px] top-[5.63px]">
-          <img alt="" className="block max-w-none size-full" src={ICON_MENU_GESTION_TIME} />
+          <Image alt="Icono de Tiempo" className="block max-w-none size-full" src={ICON_MENU_GESTION_TIME} width={34} height={34} />
         </div>
       </div>
     ),
@@ -52,7 +53,7 @@ const IconMenuGestion: React.FC<IconMenuGestionProps> = ({
       <div className="relative size-full">
         <div className="absolute bg-[#bedbff] left-0 rounded-[11.25px] size-[45px] top-0" />
         <div className="absolute left-[5.63px] size-[33.75px] top-[5.63px]">
-          <img alt="" className="block max-w-none size-full" src={ICON_MENU_GESTION_CHECK} />
+          <Image alt="Icono de Verificación" className="block max-w-none size-full" src={ICON_MENU_GESTION_CHECK} width={34} height={34} />
         </div>
       </div>
     ),
@@ -60,7 +61,7 @@ const IconMenuGestion: React.FC<IconMenuGestionProps> = ({
       <div className="relative size-full">
         <div className="absolute bg-[#cad5e2] left-0 rounded-[11.25px] size-[45px] top-0" />
         <div className="absolute left-[5.63px] size-[33.75px] top-[5.63px]">
-          <img alt="" className="block max-w-none size-full" src={ICON_MENU_GESTION_FLECHA} />
+          <Image alt="Icono de Flecha" className="block max-w-none size-full" src={ICON_MENU_GESTION_FLECHA} width={34} height={34} />
         </div>
       </div>
     ),

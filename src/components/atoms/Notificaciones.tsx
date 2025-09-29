@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { ICON_NOTIFICACIONES } from '@/constants/imagePaths';
 
 interface NotificacionesProps {
@@ -15,7 +16,7 @@ const Notificaciones: React.FC<NotificacionesProps> = ({
     <div className="content-stretch flex flex-col items-start relative size-full" data-name="Property 1=Default" data-node-id="232:222">
       <div className="bg-red-600 rounded-[6px] shrink-0 size-[12px]" data-name="Rectangle" data-node-id="232:219" />
       <div className="relative shrink-0 size-[20px]" data-name="Frame" data-node-id="232:220">
-        <img alt="Notificaciones" className="block max-w-none size-full" src={ICON_NOTIFICACIONES} />
+        <Image alt="Notificaciones" className="block max-w-none size-full" src={ICON_NOTIFICACIONES} width={20} height={20} />
       </div>
     </div>
   );

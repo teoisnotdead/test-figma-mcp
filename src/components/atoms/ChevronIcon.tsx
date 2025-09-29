@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { CHEVRON_ICON_VECTOR } from '@/constants/imagePaths';
 
 interface ChevronIconProps {
@@ -17,7 +18,7 @@ const ChevronIcon: React.FC<ChevronIconProps> = ({
     <button className="box-border content-stretch cursor-pointer flex flex-col gap-[10px] items-start px-[3px] py-[5px] relative size-full" onClick={onClick}>
       <div className="h-[4.667px] relative shrink-0 w-[9.333px]">
         <div className="absolute inset-[-21.43%_-10.71%]">
-          <img alt={`Chevron ${direction}`} className="block max-w-none size-full" src={CHEVRON_ICON_VECTOR} />
+          <Image alt={`Chevron ${direction}`} className="block max-w-none size-full" src={CHEVRON_ICON_VECTOR} width={9} height={5} />
         </div>
       </div>
     </button>
