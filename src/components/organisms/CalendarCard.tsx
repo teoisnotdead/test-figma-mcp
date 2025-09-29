@@ -8,7 +8,7 @@ import {
 } from '@/constants/imagePaths';
 
 
-const CalendarCard: React.FC<React.Component> = () => {
+const CalendarCard: React.FC = () => {
   const [currentMonth, setCurrentMonth] = useState(new Date(2025, 8)); // Cambiado a Septiembre de 2025
 
   const formatMonthYear = (date: Date) => {

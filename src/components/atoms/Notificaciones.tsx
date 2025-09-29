@@ -7,7 +7,6 @@ interface NotificacionesProps {
 }
 
 const Notificaciones: React.FC<NotificacionesProps> = ({
-  property1 = "Default",
 }) => {
   // La variante 'VarianMobilet2' en Figma no presenta cambios visuales significativos en el propio icono,
   // solo parece ser un contenedor flexible. Podríamos simplificar a solo un estado 'Default'
