@@ -26,7 +26,7 @@ const BotomMenu: React.FC<BotomMenuProps> = ({
         <div aria-hidden="true" className="absolute border border-blue-300 border-solid inset-0 pointer-events-none rounded-[8px]" />
       )}
       <div className="content-stretch flex gap-[12px] items-center relative shrink-0" data-name="Dashboard">
-        <div className="overflow-clip relative shrink-0 size-[20px]" data-name="Icon">
+        <div className="overflow-clip relative shrink-0 size-[25px]" data-name="Icon">
           <NavigationIcon type={iconType} />
         </div>
         <div className={textClasses} data-name="text">

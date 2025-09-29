@@ -52,11 +52,11 @@ const CalendarCard: React.FC = () => {
       <div className="bg-white w-full relative rounded-lg md:rounded-[12px] overflow-x-auto border border-gray-300">
         <div className="flex flex-col w-full">
           {/* Encabezado de la tabla (Horario, Días de la semana) */}
-          <div className="flex flex-nowrap border-b border-gray-300 min-w-max"> {/* Reintroducido min-w-max */}
-            <div className="flex-none p-3 md:p-4 w-[150px] font-['Inter:Semi_Bold',_sans-serif] font-semibold text-sm md:text-base text-center text-gray-700 leading-5 md:leading-6 border-r border-gray-300 flex items-center justify-center">Horario</div>
+          <div className="flex flex-nowrap border-b border-gray-300"> {/* Removido min-w-max */} 
+            <div className="flex-none p-3 md:p-4 min-w-[100px] lg:min-w-[150px] font-['Inter:Semi_Bold',_sans-serif] font-semibold text-sm md:text-base text-center text-gray-700 leading-5 md:leading-6 border-r border-gray-300 flex items-center justify-center">Horario</div>
             {/* Días de la semana, ajustado para ser más responsive */}
             {["dom, 31 ago", "lun, 1 sept", "mar, 2 sept", "mié, 3 sept", "jue, 4 sept", "vie, 5 sept", "sáb, 6 sept"].map((day, index) => (
-              <div key={index} className="flex-none p-3 md:p-4 w-[150px] text-center font-['Inter:Semi_Bold',_sans-serif] font-semibold text-sm md:text-base text-gray-700 leading-5 md:leading-6 border-r border-gray-300 last:border-r-0 flex items-center justify-center"> {/* Ancho 150px y last:border-r-0 */}
+              <div key={index} className="flex-none p-3 md:p-4 min-w-[100px] lg:min-w-[150px] text-center font-['Inter:Semi_Bold',_sans-serif] font-semibold text-sm md:text-base text-gray-700 leading-5 md:leading-6 border-r border-gray-300 last:border-r-0 flex items-center justify-center"> {/* Ancho 1/8 */}
                 {day}
               </div>
             ))}
@@ -64,11 +64,11 @@ const CalendarCard: React.FC = () => {
 
           {/* Filas de Turnos */}
           {["18:00-06:00", "06:00-18:00"].map((shiftTime, shiftIndex) => (
-            <div key={shiftIndex} className="flex flex-nowrap border-b border-gray-300 last:border-b-0 min-w-max"> {/* Reintroducido min-w-max */}
-              <div className="flex-none p-3 md:p-4 w-[150px] font-['Inter:Medium',_sans-serif] font-medium text-sm md:text-base text-gray-700 leading-5 md:leading-6 border-r border-gray-300 flex items-center justify-center">{shiftTime}</div>
+            <div key={shiftIndex} className="flex flex-nowrap border-b border-gray-300 last:border-b-0"> {/* Removido min-w-max */}
+              <div className="flex-none p-3 md:p-4 min-w-[100px] lg:min-w-[150px] font-['Inter:Medium',_sans-serif] font-medium text-sm md:text-base text-gray-700 leading-5 md:leading-6 border-r border-gray-300 flex items-center justify-center">{shiftTime}</div>
               {/* Celdas de días, responsive */}
               {Array(7).fill(0).map((_, dayIndex) => (
-                <div key={dayIndex} className="flex-none p-3 md:p-4 w-[150px] text-center font-['Inter:Regular',_sans-serif] font-normal text-xs md:text-sm text-[#364153] leading-4 md:leading-5 border-r border-gray-300 last:border-r-0 flex items-center justify-center"> {/* Ancho 150px y last:border-r-0 */}
+                <div key={dayIndex} className="flex-none p-3 md:p-4 min-w-[100px] lg:min-w-[150px] text-center font-['Inter:Regular',_sans-serif] font-normal text-xs md:text-sm text-[#364153] leading-4 md:leading-5 border-r border-gray-300 last:border-r-0 flex items-center justify-center"> {/* Ancho 1/8 */}
                   Disponible
                 </div>
               ))}

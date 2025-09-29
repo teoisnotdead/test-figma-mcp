@@ -9,7 +9,7 @@ export const ICON_MENU_GESTION_ALERT = "/alert.svg";
 export const ICON_MENU_GESTION_TIME = "/time.svg";
 export const ICON_MENU_GESTION_CHECK = "/ok.svg";
 export const ICON_MENU_GESTION_FLECHA = "/prod.svg";
-export const HEADER_MENU_ICON = "/header_menu_icon.svg";
+export const HEADER_MENU_ICON = "/menu.svg";
 export const LOGIN_LOGO_INNER = "/login_logo_inner.svg";
 export const LOGIN_LOGO_MAIN = "/login_logo_main.svg";
 

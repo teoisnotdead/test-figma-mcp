@@ -4,8 +4,6 @@ import React, { useState } from 'react';
 import BotomMenu from '@/components/molecules/BotomMenu';
 import CardAlerta from '@/components/molecules/CardAlerta';
 import { useRouter } from 'next/navigation';
-import Image from 'next/image';
-import { CLOSE_ICON } from '@/constants/imagePaths'; // Asumo que tienes un icono de cerrar
 
 interface NavigationSidebarProps {
   isOpen: boolean;
@@ -30,7 +28,7 @@ const NavigationSidebar: React.FC<NavigationSidebarProps> = ({
   };
 
   return (
-    <div className={`fixed inset-y-0 left-0 transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out bg-white z-30 flex flex-col gap-[40px] items-center p-[24px] relative max-w-[256px] min-w-[217px] w-[256px] h-full md:relative md:flex md:translate-x-0 md:min-h-screen flex-grow`} data-name="Menu">
+    <div className={`fixed inset-y-0 left-0 transform ${isOpen ? 'translate-x-0' : 'translate-x-[-256px]'} transition-transform duration-300 ease-in-out bg-white z-30 flex flex-col gap-[40px] items-center p-[24px] w-[256px] md:relative md:flex md:translate-x-0 md:min-h-screen md:w-[256px] flex-shrink-0`} data-name="Menu">
       <div aria-hidden="true" className="absolute border-[0px_1px_0px_0px] border-slate-200 border-solid inset-0 pointer-events-none shadow-[0px_1px_3px_0px_rgba(0,0,0,0.1),0px_1px_2px_0px_rgba(0,0,0,0.06)]" />
       {/* Botón de cierre para móvil */}
       <button
@@ -38,7 +36,7 @@ const NavigationSidebar: React.FC<NavigationSidebarProps> = ({
         className="absolute top-4 right-4 md:hidden z-40"
         aria-label="Cerrar menú"
       >
-        <Image src={CLOSE_ICON} alt="Cerrar" width={24} height={24} />
+        <span className="text-2xl font-bold text-gray-800">X</span>
       </button>
       <div className="content-stretch flex flex-col gap-[28px] items-start relative shrink-0 w-full" data-name="Container">
         <div className="content-stretch flex flex-col gap-[4px] items-start relative shrink-0 w-full" data-name="Card Menu">
