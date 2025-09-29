@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import {
-  HEADER_LOGO,
+  ICON_LOGO,
   NOTIFICACIONES_ICON,
   USER_AVATAR,
   CHEVRON_ICON,
@@ -34,7 +34,7 @@ const Header: React.FC<HeaderProps> = ({
         <div className="bg-[#193cb8] box-border content-stretch flex gap-[8px] md:gap-[10px] items-center p-[6.4px] md:p-[8px] relative rounded-[6.4px] md:rounded-[8px] shrink-0 size-[32px] md:size-[40px]">
           {/* Logo */}
           <div className="relative shrink-0 size-[19.2px] md:size-[24px]">
-            <Image alt="Logo" className="block max-w-none size-full" src={HEADER_LOGO} width={19} height={19} />
+            <Image alt="Logo" className="block max-w-none size-full" src={ICON_LOGO} width={19} height={19} />
           </div>
         </div>
 
@@ -52,10 +52,9 @@ const Header: React.FC<HeaderProps> = ({
       {/* Sección derecha: Notificaciones, Icono de usuario, Nombre y Chevron */}
       <div className="content-stretch flex gap-[4px] md:gap-[16px] items-center justify-end relative shrink-0 w-[132px] md:w-auto">
         {/* Icono de Notificaciones */}
-        <div className="content-stretch flex flex-col items-start relative shrink-0 w-[20px]">
-          <div className="bg-red-600 rounded-[6px] shrink-0 size-[12px]" aria-hidden="true" />
-          <div className="relative shrink-0 size-[20px]">
-            <Image alt="Notificaciones" className="block max-w-none size-full" src={NOTIFICACIONES_ICON} width={20} height={20} />
+        <div className="content-stretch flex flex-col items-start relative shrink-0 w-[24px]">
+          <div className="size-[30px]">
+            <Image alt="Notificaciones" className="block max-w-none size-full" src={NOTIFICACIONES_ICON} width={30} height={30} />
           </div>
         </div>
         {/* Icono de Usuario */}
@@ -67,11 +66,9 @@ const Header: React.FC<HeaderProps> = ({
           <p className="leading-[20px] whitespace-pre">{userName}</p>
         </div>
         {/* Icono Chevron */}
-        <button className="box-border content-stretch cursor-pointer flex flex-col gap-[10px] items-start overflow-clip px-[3px] py-[5px] relative shrink-0 w-[16px]" aria-label="Abrir menú de usuario">
-          <div className="h-[4.667px] relative shrink-0 w-[9.333px]">
-            <div className="absolute inset-[-21.43%_-10.71%]">
-              <Image alt="Chevron" className="block max-w-none size-full" src={CHEVRON_ICON} width={10} height={5} />
-            </div>
+        <button className="box-border content-stretch cursor-pointer flex items-center justify-center relative shrink-0 size-4" aria-label="Abrir menú de usuario">
+          <div className="relative size-full">
+            <Image alt="Chevron" className="block max-w-none size-full" src={CHEVRON_ICON} width={16} height={16} />
           </div>
         </button>
       </div>

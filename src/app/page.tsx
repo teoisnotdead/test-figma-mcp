@@ -44,7 +44,7 @@ export default function Home() {
           ></div>
         )}
         <NavigationSidebar isOpen={isSidebarOpen} onClose={toggleSidebar} />
-        <main className="flex-1 p-4 flex flex-col gap-4">
+        <main className="flex-1 p-16 mr-52 flex flex-col gap-4">
           <h1 className="text-2xl font-bold">Dashboard Principal</h1>
           <p className="mb-4">Resumen de operaciones y indicadores clave.</p>
           <StatsCardsGrid />
